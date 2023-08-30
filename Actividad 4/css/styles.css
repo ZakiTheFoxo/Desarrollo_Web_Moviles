@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+body {
+    margin:0;
+	padding:0;
+    width: 100%;
+    font-family: "Poppins",helvetica,arial,sans-serif;
+	box-sizing: border-box;
+    font-size: small;
+    overflow: auto;
+}
+
+header {
+    width: 100%;
+    position: relative;
+}
+
+header div.container {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+header div.bar {
+    padding: 16px 5%;
+    display: flex;
+    justify-content: space-between;
+    color: #999;
+}
+
+nav {
+    align-items: center;
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+nav div.container {
+    padding: 16px 5%;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+nav div.logitech {
+    width: 10%;
+    object-fit: cover;
+}
+
+nav div.logitech img {
+    height: 3.5em
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul.main {
+    width: 440px;
+}
+
+nav ul.main li a {
+    color: #2f3132;
+    text-decoration: none;
+    padding: 6px 16px;
+    border-radius: 200px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+nav ul.main li a:hover {
+    background-color: #fff;
+}
+
+nav ul.extras {
+    width: 10%;
+}
+
+nav ul.extras li {
+    cursor: pointer;
+}
+
+section.logo {
+    width: 100%;
+    height: 76vh;
+    background-image: url("../img/portada.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+section.logo div.texto {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #2f3132;
+    letter-spacing: 2px;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: auto;
+}
+
+section.logo div.texto p {
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+section.logo div.texto button {
+    background-color: #2f3132;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    padding: 16px 20px;
+    font-size: 0.7em;
+    font-weight: 700;
+    align-self: center;
+    border: 2px solid #2f3132;
+    width: 178px;
+    cursor: pointer;
+    margin-top: 28px;
+    transition: 0.2s;
+}
+
+section.logo div.texto button:hover {
+    background-color: transparent;
+    color: #2f3132;
+}
+
+.main-page {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+section.info {
+    padding: 70px 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+section.info article {
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 33%;
+    padding: 0 1.5em;
+}
+
+section.info article div.img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+    header {
+        display: none;
+    }
+
+    section.logo {
+        width: 100%;
+        height: 100vh;
+        background-image: url("../img/portada_movil.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+}
