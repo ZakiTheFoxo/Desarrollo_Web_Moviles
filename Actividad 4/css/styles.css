@@ -27,11 +27,23 @@ header div.bar {
     color: #999;
 }
 
+header div.bar .marcas::after {
+    content: " V";
+}
+
+header div.bar .mexico::before {
+    content: '🌎 ';
+}
+
 nav {
     align-items: center;
     position: relative;
     max-width: 1440px;
     margin: 0 auto;
+}
+
+nav .burger {
+    display: none;
 }
 
 nav div.container {
@@ -104,7 +116,7 @@ section.logo div.texto {
     transform: translate(-50%, -50%);
     color: #2f3132;
     letter-spacing: 2px;
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: 300;
     text-align: center;
     margin: 0;
@@ -117,7 +129,7 @@ section.logo div.texto p {
     margin: 0;
     padding-bottom: 20px;
     font-size: 2.5em;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 section.logo div.texto button {
@@ -150,11 +162,11 @@ section.logo div.texto button:hover {
 section.info {
     padding: 70px 5%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    overflow: auto;
+    left: 0;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
 }
 
 section.info article {
@@ -162,7 +174,7 @@ section.info article {
     box-sizing: border-box;
     overflow: hidden;
     width: 33%;
-    padding: 0 1.5em;
+    padding: 0 10px;
 }
 
 section.info article div.img-container img{
@@ -171,9 +183,385 @@ section.info article div.img-container img{
     object-fit: cover;
 }
 
+section.info article a {
+    text-transform: uppercase;
+    color: #2f2f2f;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+section.info article a:hover {
+    text-decoration: underline;
+}
+
+section.info article a h2 {
+    text-transform: uppercase;
+    color: #000;
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+section.info article p {
+    font-size: 1.4em;
+    font-weight: 300;
+    margin: 10px auto;
+    padding: 0;
+}
+
+section.info article a.link::after {
+    content: " >";
+}
+
+section.grid-section {
+    padding: 70px 5%;
+    max-width: 100%;
+    margin-top: 5%;
+}
+
+section.grid-section div.container {
+    display: grid;
+    width: 100%;
+    grid-gap: 20px;
+    grid-template-areas: 
+        "A A D"
+        "A A D"
+        "B C D";
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #2f3132;
+    position: absolute;
+    bottom: 30px;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.grid-c .title {
+    top: 30px;
+}
+
+.grid-a, .grid-b, .grid-c, .grid-d {
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-a {
+    grid-area: A;
+}
+
+.grid-b {
+    grid-area: B;
+}
+
+.grid-c {
+    grid-area: C;
+}
+
+.grid-d {
+    grid-area: D;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: 0.2s all ease-in-out;
+}
+
+.img:hover img {
+    transform: scale(1.05);
+}
+
+.points {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.fixed-button {
+    position: fixed;
+    bottom: 0px;
+    right: 0px; 
+    padding: 20px;
+}
+
+.msg {
+    height: 60px;
+    line-height: 90px;  
+    width: 60px;  
+    font-weight: bold;
+    border-radius: 50%;
+    background-color: #434444;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    text-align: center;
+    cursor: pointer;
+}
+
+.msg > svg {
+    fill: #fff;
+    font-size: 3em;
+}
+
+section.carrousel {
+    background-image: url('../img/pcr-plastic-desktop.webp');
+    width: 100%;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+section.carrousel div.img {
+    width: 180px;
+    height: fit-content;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    cursor:default;
+}
+
+section.carrousel div.texto {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: auto;
+}
+
+section.carrousel div.texto p {
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 4em;
+    font-weight: 900;
+}
+
+section.carrousel div.texto button {
+    background-color: #fff;
+    text-transform: uppercase;
+    color: #2f3132;
+    border: none;
+    padding: 16px 20px;
+    font-size: 1em;
+    font-weight: 700;
+    align-self: center;
+    border: 2px solid #fff;
+    width: 400px;
+    cursor: pointer;
+    margin-top: 28px;
+    transition: 0.2s;
+}
+
+section.carrousel div.texto button:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+.points2 {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px 0;
+    width: 100%;
+    color: #fff;
+}
+
+footer {
+    background-color: #252a2c;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    height: auto;
+}
+
+hr {
+    width: 90%;
+}
+
+footer div.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+footer div.container .extra-info {
+    padding: 70px 5% 20px;
+    display: flex;
+    gap: 8%;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+footer div.container .extra-info div p {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+footer div.container .extra-info div ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer div.container .extra-info div ul li {
+    padding: 10px 0;
+}
+
+footer div.container .extra-info div ul a {
+    text-decoration: none;
+    color: #929596;
+    font-size: 1.3em;
+}
+
+footer div.container .extra-info div ul a:hover {
+    text-decoration: underline;
+}
+
+.about, .values, .clients {
+    width: 150px;
+}
+
+footer div.container div.contacto {
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+footer div.container div.contacto div.redes {
+    color: #929596;
+}
+
+footer div.container div.contacto div.redes i {
+    padding: 25px 10px;
+}
+
+footer div.container div.contacto div.contacto2 div.correo{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+footer div.container div.contacto div.contacto2 label {
+    color: #929596;
+    font-size: 1.5em;
+    position: relative;
+    display: block;
+    width: 420px;
+    box-sizing: border-box;
+}
+
+input[type="email"] {
+    width: 360px;
+    height: 47px;
+    font-size: 16px;
+    font-weight: 100;
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+button {
+    width: 50px;
+    height: 52px;
+    border: none;
+    background: yellow;;
+}
+
+footer div.container div.copy {
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer div.container div.copy div.copy2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+footer div.container div.copy div.copy2 div.terms{
+    display: flex;
+    justify-content: space-between;
+}
+
+.term::after {
+    content: " |";
+}
+
+.copy2 p, .term, .term2 {
+    color: #929596;
+    font-size: 1.3em;
+    font-weight: 500;
+    margin: 0;
+    padding: 5px;
+}
+
+.term, .term2 {
+    cursor: pointer;
+}
+
+.lg {
+    color: #929596;
+    font-size: 1.3em;
+}
+
 @media (max-width: 1024px) {
     header {
         display: none;
+    }
+
+    ul.main {
+        display: none;
+    }
+
+    nav .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     section.logo {
