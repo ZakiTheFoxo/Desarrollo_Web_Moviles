@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+nav {
+    height: 60px;
+    width: 100%;
+    background-color: #373737;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+nav>a {
+    padding-right: 20px;
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+.container {
+    display: flex;
+    width: 100% !important;
+    justify-content: space-evenly;
+}
+
+.left-side {
+    width: auto;
+    margin: 0 10px;
+}
+
+.right-side {
+    width: auto;
+    margin: 0 10px;
+}
+
+td>img {
+    width: 50px;
+}
+
+.result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.result_container {
+    width: 160px;
+    padding: 10px;
+}
+
+.search_img {
+    width: 100px;
+}
+
+.carousel {
+    width: 200px;
+}
+
+.carousel-item>img {
+    width: 200px;
+}
+
+.board {
+    width: 328px;
+}
+
+#btn_generate {
+    margin: 0 20px;
+}
+
+.grid {
+    display: grid;
+    width: 100%;
+    grid-gap: 2px;
+    border: 1px solid;
+    grid-template-areas: 
+        "A1 A2 A3 A4"
+        "A5 A6 A7 A8"
+        "A9 A10 A11 A12"
+        "A13 A14 A15 A16";
+}
+
+.grid img {
+    width: 80px;
+
+}
+
+.grid_1 {
+    grid-area: A1;
+}
+
+.grid_2 {
+    grid-area: A2;
+}
+
+.grid_3 {
+    grid-area: A3;
+}
+
+.grid_4 {
+    grid-area: A4;
+}
+
+.grid_5 {
+    grid-area: A5;
+}
+
+.grid_6 {
+    grid-area: A6;
+}
+
+.grid_7 {
+    grid-area: A7;
+}
+
+.grid_8 {
+    grid-area: A8;
+}
+
+.grid_9 {
+    grid-area: A9;
+}
+
+.grid_10 {
+    grid-area: A10;
+}
+
+.grid_11 {
+    grid-area: A11;
+}
+
+.grid_12 {
+    grid-area: A12;
+}
+
+.grid_13 {
+    grid-area: A13;
+}
+
+.grid_14 {
+    grid-area: A14;
+}
+
+.grid_15 {
+    grid-area: A15;
+}
+
+.grid_16 {
+    grid-area: A16;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-side {
+        margin: 0 0 10px;
+    }
+
+    .right-side {
+        margin: 0;
+    }
+}

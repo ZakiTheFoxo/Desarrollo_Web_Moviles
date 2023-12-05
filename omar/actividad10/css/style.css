@@ -1,0 +1,11 @@
+.text-center {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    right: 30%;
+    width: 40%;
+}
+
+.container {
+    width: 100%;
+}
